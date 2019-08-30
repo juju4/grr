@@ -145,7 +145,7 @@ setup_args = dict(
     install_requires=[
         "biplist==1.0.3",
         "configparser==3.5.0",
-        "cryptography==2.4.2",
+        "cryptography==%s" % ("2.4.2" if sys.version_info < (3, 0) else "2.7.0"),
         "distro==1.4.0",
         "fleetspeak==0.1.3",
         "future==0.17.0",
